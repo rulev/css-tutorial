@@ -1,0 +1,293 @@
+/* reset code and common starts here */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    font-weight: 400;
+}
+
+html {
+    background-color: #fafafa;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #fff;
+    width: 100rem;
+    max-width: 100%;
+    margin: auto;
+    box-shadow: 0.1rem 0.1rem 0.1rem #c4c4c4, -0.1rem 0 0.1rem #c4c4c4;
+
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-white {
+    color: white;
+}
+/* reset code and common ends here */
+
+/* header starts here */
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: black;
+    padding: 2rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    min-height: 5vh;
+}
+
+.logo-figure {
+    border: 1px solid #fff;
+}
+
+.logo {
+    font-size: 4rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li {
+    padding: 1rem;
+    transition: all 0.4s;
+}
+
+nav ul li:hover {
+    background-color: brown;
+    border-radius: 0.6rem;
+}
+
+.nav__link {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
+}
+/* header ends here */
+
+
+/* blog banner section starts here */
+.banner {
+    padding: 5rem 1rem;
+    display: flex;
+    align-items: center;
+    min-height: 95vh;
+}
+
+.banner article {
+    flex-basis: 50%;
+    margin: 1rem;
+}
+
+.banner aside {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.banner__heading {
+    background-color: black;
+    color: white;
+    font-size: 3rem;
+    width: 27rem;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.banner__desc {
+    font-size: 1.5rem;
+}
+
+.banner__img {
+    width: 50rem;
+    height: 50rem;
+    border: 0.3rem solid;
+}
+/* blog banner section ends here */
+
+/* about me section starts here */
+#blog-about {
+    background-color: #4c4c4c;
+}
+
+.section-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.section-heading {
+    font-size: 6rem;
+    font-family: "Lucida Calligraphy",cursive;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card {
+    flex: 1;
+    border-radius: 0.5rem;
+    background-color: #a09d9d;
+    padding: 3rem 1rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    transition: all 100ms 0s linear;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card__header {
+    font-size: 3rem;
+}
+
+.card__desc {
+    font-size: 1.8rem;
+}
+
+.card__btn {
+    font-size: 2.2rem;
+    width: 80%;
+    padding: 1rem;
+    background-color: yellow;
+    border-radius: 0.5rem;
+    border: 0;
+    box-shadow: 0.3rem 0.3rem #4c4c4c;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+/* about me section ends here */
+
+/* archive section starts here */
+/* #archive {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 50vh;
+} */
+
+.archive-container {
+    width: 100%;
+}
+
+.archive__list {
+    display: flex;
+    /* gap: 10%; */
+    justify-content: space-evenly;
+    /* width: 100%; */
+}
+
+.archive__img {
+    height: 20vh;
+    transition: all 100ms 0s linear;
+}
+
+.archive__img:hover {
+    transform: scale(1.1);
+}
+/* archive section ends here */
+
+/* responsiveness starts here */
+@media screen and (max-width: 992px ){
+    .banner {
+        flex-direction: column;
+    }
+
+    .banner article {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+}
+
+@media screen and (max-width: 768px ){
+    html {
+        font-size: 55.5%;
+    }
+
+    .banner article {
+        width: 75%;
+    }
+
+    .card {
+        margin: 1rem;
+    }
+
+    .archive__list {
+        gap: 5rem;
+    }
+
+}
+
+@media screen and (max-width: 600px ){
+    html {
+        font-size: 48.5%;
+    }
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding-left: 2.5rem;
+    }
+
+    .banner {
+        min-height: auto;
+    } 
+
+    .banner article {
+        width: 83%
+    }
+
+    .banner__img {
+        max-width: 100%;
+    }
+
+    #blog-about {
+        min-height: auto;
+    }
+
+    .cards {
+        flex-direction: column;
+        width: 83%;
+    }
+    
+    .archive__img {
+        width: 100%;
+        height: auto;
+    }
+
+    .archive__list {
+        flex-direction: column;
+        width: 83%;
+        align-items: center;
+    }
+
+}
+/* responsiveness ends here */
